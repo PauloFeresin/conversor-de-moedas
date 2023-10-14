@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversor de moedas</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <div>
+    <h1>Conversor de moedas</h1>
+    <form>
+        <label for="fromCurrency">Moeda base:</label>
+        <select id="fromCurrency" name="fromCurrency">
+            <option value="BRL">Brazilian Real (BRL)</option>
+            <option value="USD">United States Dollar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="GBP">British Pound Sterling (GBP)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+            <!-- Add more currency options here -->
+        </select>
+
+        <br>
+
+        <label for="toCurrency">Moeda a converter:</label>
+        <select id="toCurrency" name="toCurrency">
+            <option value="BRL">Brazilian Real (BRL)</option>
+            <option value="USD">United States Dollar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="GBP">British Pound Sterling (GBP)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+            <!-- Add more currency options here -->
+        </select>
+        <br>
+        
+        <input type="checkbox" id="opcoeAvancadas" name="opcoeAvancadas" />
+        <label for="opcoeAvancadas">Opções Avançadas</label>
+        <br>
+
+        <input type="text" id="codigoMoedaManual" name="codigoMoedaManual" placeholder="USD-BRL">
+        <label for="codigoMoedaManual">Digite o código das duas moedas, seguindo o exemplo</label>
+        
+        <br>
+        
+        <button type="button" onclick="convertCurrency()">Converter</button>
+    </form>
+    </div>
+
+    <div>
+
+
+
+        <form>
+                <label for="fromCurrencyPeriod">Moeda base:</label>
+                <select id="fromCurrencyPeriod" name="fromCurrencyPeriod">
+                    <option value="BRL">Brazilian Real (BRL)</option>
+                    <option value="USD">United States Dollar (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="GBP">British Pound Sterling (GBP)</option>
+                    <option value="JPY">Japanese Yen (JPY)</option>
+                    <!-- Add more currency options here -->
+                </select>
+        
+                <br>
+        
+                <label for="toCurrencyPeriod">Moeda a converter:</label>
+                <select id="toCurrencyPeriod" name="toCurrencyPeriod">
+                    <option value="BRL">Brazilian Real (BRL)</option>
+                    <option value="USD">United States Dollar (USD)</option>
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="GBP">British Pound Sterling (GBP)</option>
+                    <option value="JPY">Japanese Yen (JPY)</option>
+                    <!-- Add more currency options here -->
+                </select>
+
+
+
+
+            <label for="currencyPeriod">Periodo</label>
+            <select id="currencyPeriod" name="currencyPeriod">
+                <option value="30"> 30 dias</option>
+                <option value="60"> 60 dias</option>
+                <option value="90"> 90 dias</option>
+                <option value="120"> 120 dias</option>
+            </select>
+
+        </form>
+
+
+
+
+            <br>
+            <button type="button" onclick="showClosingDays()">Mostrar histórico</button>
+        </form>>
+    </div>
+
+
+
+    <div id="result"></div>
+
+    <script src="conversor_moedas.js"></script>
+</body>
+</html>
